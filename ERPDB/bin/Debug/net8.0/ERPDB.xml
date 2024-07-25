@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ERPDB</name>
+    </assembly>
+    <members>
+        <member name="M:ERPDB.Controllers.tb_UserMemberController.GetAll">
+            <summary>      
+            功能:全部使用者
+            </summary>       
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.Account">
+            <summary>
+            員工帳號
+            </summary>        
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.Password">
+            <summary>
+            密碼
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.UserName">
+            <summary>
+            使用者姓名
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.Tel">
+            <summary>
+            電話
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.Email">
+            <summary>
+            電話
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.BirthDay">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.LoginNumber">
+            <summary>
+            登入次數
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.CreationDate">
+            <summary>
+            新增時間
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.CreatedBy">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.LastUpdateDate">
+            <summary>
+            修改時間
+            </summary>
+        </member>
+        <member name="P:ERPDB.Model.tb_UserMember.LastUpdatedBy">
+            <summary>
+            修改人員
+            </summary>
+        </member>
+    </members>
+</doc>
