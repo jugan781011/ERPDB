@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen(options =>
     {
         Title = "ERPAPI",
         Description = "New Swagger Document",
-        Version = "v0724",
+        Version = "v0804",
     });
     var filename = Assembly.GetExecutingAssembly().GetName().Name + ".xml";
     var filepath = Path.Combine(AppContext.BaseDirectory, filename);

@@ -4,6 +4,7 @@ using ERPDB.Repositorys;
 using ERPDB.ResourceParameters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ERPDB.Controllers
 {
@@ -26,7 +27,7 @@ namespace ERPDB.Controllers
 
         ///<summary>      
         ///功能:取得全部使用者
-        ///</summary>       
+        ///</summary> 
         [HttpGet("all")]
         public async Task<ActionResult> GetAll()
         {
@@ -35,8 +36,8 @@ namespace ERPDB.Controllers
                 return Ok(await _tb_UserMemberRepository.GetAll());
             }
             catch (Exception)
-            {             
-                return StatusCode(StatusCodes.Status500InternalServerError,"系統錯誤");
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "系統錯誤");
             }
         }
 

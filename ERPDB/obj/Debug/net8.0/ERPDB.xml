@@ -7,7 +7,7 @@
         <member name="M:ERPDB.Controllers.tb_UserMemberController.GetAll">
             <summary>      
             功能:取得全部使用者
-            </summary>       
+            </summary> 
         </member>
         <member name="M:ERPDB.Controllers.tb_UserMemberController.Search(ERPDB.ResourceParameters.UserMemberParamaters)">
             <summary>      

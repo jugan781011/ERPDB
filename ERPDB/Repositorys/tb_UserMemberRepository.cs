@@ -19,16 +19,34 @@ namespace ERPDB.Repositorys
 
         public async Task<tb_UserMember> Add(tb_UserMember list)
         {
-            list.CreationDate= DateTime.Now;
+            list.CreationDate = DateTime.Now;
             var result = await _myDbContext.tb_UserMember.AddAsync(list);
             return result.Entity;
         }
 
+        public async Task<tb_UserMember> Update(tb_UserMember list)
+        {
+            var result = await _myDbContext.tb_UserMember
+               .FirstOrDefaultAsync(e => e.Id == list.Id);
+
+            if (result != null)
+            {
+                list.LastUpdateDate = DateTime.Now;
+                _myDbContext.tb_UserMember.Update(result).CurrentValues.SetValues(list);
+
+                await _myDbContext.SaveChangesAsync();
+
+                return result;
+            }
+
+            return null;
+        }
+
         public async Task Delete(int id)
         {
-            var delete = await(from a in _myDbContext.tb_UserMember
-                               where a.Id == id
-                               select a).SingleOrDefaultAsync();
+            var delete = await (from a in _myDbContext.tb_UserMember
+                                where a.Id == id
+                                select a).SingleOrDefaultAsync();
 
 
             if (delete != null)
@@ -52,7 +70,7 @@ namespace ERPDB.Repositorys
 
         public async Task<IEnumerable<tb_UserMember>> Search([FromQuery] UserMemberParamaters paramaters)
         {
-            var result = from a in _myDbContext.tb_UserMember
+            var result = from a in _myDbContext.tb_UserMember.OrderBy(x=>x.Account)
                          select a;
 
             if (!string.IsNullOrWhiteSpace(paramaters.UserName1))
@@ -73,21 +91,7 @@ namespace ERPDB.Repositorys
             return await result.ToListAsync();
         }
 
-        public async Task<tb_UserMember> Update(tb_UserMember list)
-        {
-            var result = await _myDbContext.tb_UserMember
-               .FirstOrDefaultAsync(e => e.Id == list.Id);
+        
 
-            if (result != null)
-            {               
-                _myDbContext.tb_UserMember.Update(result).CurrentValues.SetValues(list);
-
-                await _myDbContext.SaveChangesAsync();
-
-                return result;
-            }
-
-            return null;
-        }
     }
 }
