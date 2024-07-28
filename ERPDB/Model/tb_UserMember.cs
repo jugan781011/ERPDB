@@ -45,7 +45,7 @@
         ///<summary>
         ///修改時間
         ///</summary>
-        public string LastUpdateDate { get; set; }
+        public DateTime? LastUpdateDate { get; set; }
         ///<summary>
         ///修改人員
         ///</summary>

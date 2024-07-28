@@ -6,8 +6,28 @@
     <members>
         <member name="M:ERPDB.Controllers.tb_UserMemberController.GetAll">
             <summary>      
-            功能:全部使用者
+            功能:取得全部使用者
             </summary>       
+        </member>
+        <member name="M:ERPDB.Controllers.tb_UserMemberController.Search(ERPDB.ResourceParameters.UserMemberParamaters)">
+            <summary>      
+            功能:查詢使用者
+            </summary>       
+        </member>
+        <member name="M:ERPDB.Controllers.tb_UserMemberController.Add(ERPDB.Model.tb_UserMember)">
+            <summary>      
+            功能:新增
+            </summary>   
+        </member>
+        <member name="M:ERPDB.Controllers.tb_UserMemberController.Update(ERPDB.Model.tb_UserMember)">
+            <summary>      
+            功能:修改
+            </summary>   
+        </member>
+        <member name="M:ERPDB.Controllers.tb_UserMemberController.Delete(System.Int32)">
+            <summary>      
+            功能:刪除
+            </summary>   
         </member>
         <member name="P:ERPDB.Model.tb_UserMember.Id">
             <summary>
@@ -67,6 +87,51 @@
         <member name="P:ERPDB.Model.tb_UserMember.LastUpdatedBy">
             <summary>
             修改人員
+            </summary>
+        </member>
+        <member name="M:ERPDB.Repositorys.Itb_UserMemberRepository.GetAll">
+            <summary>
+            取得全部使用者資料
+            </summary>
+        </member>
+        <member name="M:ERPDB.Repositorys.Itb_UserMemberRepository.Search(ERPDB.ResourceParameters.UserMemberParamaters)">
+            <summary>
+            使用者帳號查詢
+            </summary>
+        </member>
+        <member name="M:ERPDB.Repositorys.Itb_UserMemberRepository.Add(ERPDB.Model.tb_UserMember)">
+            <summary>
+            新增使用者
+            </summary>
+        </member>
+        <member name="M:ERPDB.Repositorys.Itb_UserMemberRepository.Update(ERPDB.Model.tb_UserMember)">
+            <summary>
+            修改使用者
+            </summary>
+        </member>
+        <member name="M:ERPDB.Repositorys.Itb_UserMemberRepository.Delete(System.Int32)">
+            <summary>
+            刪除使用者
+            </summary>
+        </member>
+        <member name="M:ERPDB.Repositorys.Itb_UserMemberRepository.SaveAsync">
+            <summary>
+            儲存
+            </summary>
+        </member>
+        <member name="P:ERPDB.ResourceParameters.UserMemberParamaters.Account1">
+            <summary>
+            使用者帳號
+            </summary>
+        </member>
+        <member name="P:ERPDB.ResourceParameters.UserMemberParamaters.UserName1">
+            <summary>
+            使用者名稱
+            </summary>
+        </member>
+        <member name="P:ERPDB.ResourceParameters.UserMemberParamaters.Tel1">
+            <summary>
+            使用者電話
             </summary>
         </member>
     </members>

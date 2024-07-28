@@ -1,4 +1,5 @@
 using ERPDB.Model;
+using ERPDB.Repositorys;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -22,6 +23,9 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(filepath);
 });
 
+#region Service
+builder.Services.AddTransient<Itb_UserMemberRepository, tb_UserMemberRepository>();
+#endregion
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
